@@ -1,0 +1,114 @@
+
+@import '../../../../assets/scss/all.scss';
+
+.weather-report{
+    margin: 40px auto;
+    width: 88%;
+    .weather{
+        margin: 0 auto;
+        background: #123052;
+        padding: 17px 10px 17px 10px;
+        span{
+            color:$white;
+            font-size: 23px;
+            padding-left: 13px;
+        }
+    }
+    .weather-info{
+        margin: 0 auto;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            li{
+                list-style: none;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 18px;
+                .city{
+                    font-size: 26px;
+                    color:$white;
+                    font-family: 'RoboBold';
+                    margin-bottom: 19px;
+                }
+                .cel{
+                    font-size: 90px;
+                    color:$white;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        border: 4px solid #fff;
+                        border-radius: 100%;
+                        right: -21px;
+                        top: 9px;
+
+                    }
+                }
+            }
+        }
+    }
+    
+    .weather0{
+        background: #0D7E88;
+    }
+    .weather1{
+        background: #D09378;
+    }
+    .weather2{
+        background: #405B5D;
+    }
+    .weather3{
+        background: #74A748;
+    }
+
+    .loader.sm{
+        width: 60%;
+    }
+}
+
+
+@include screen (mobile){
+.weather-report{
+    margin: 40px auto;
+    width: 98%;
+    .weather{
+        span{
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
+        }
+    .weather-info{
+        ul{
+            width: 100%;
+    flex-wrap: wrap;
+    li{
+        flex-direction: column;
+        padding: 25px 0px 25px 0px !important;
+        width: 50% !important;
+        .city{
+            font-size: 18px;
+        }
+        .cel{
+            font-size: 29px;
+            margin-top: 17px;
+            &::before{
+            width: 6px;
+            height: 6px;
+            right: -21px;
+            top: 0px;
+            }
+        }
+        img{
+            width: 40px;
+        }
+    }
+        }
+    }
+}
+    }

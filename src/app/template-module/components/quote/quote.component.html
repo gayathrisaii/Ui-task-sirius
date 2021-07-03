@@ -1,0 +1,66 @@
+<div class="quote">
+
+    <h2>
+        Travelling as a group? Get a Quote
+    </h2>
+
+    <form  [formGroup]="quoteForm">
+             
+        <div class="form">
+            <div class="form-val">
+                <label>Your name</label>
+                <input type="text" class="input" name="name" formControlName="userName" required>
+                <span
+                *ngIf="isSubmitted ||(quoteForm.controls['userName'].invalid && (quoteForm.controls['userName'].dirty || quoteForm.controls['userName'].touched))"
+                class="form-error">
+                <ng-container *ngIf="quoteForm.controls['userName']?.errors?.required">
+                  {{ "User Name is required." }}
+                </ng-container>
+                <ng-container
+              *ngIf="quoteForm.controls['userName'].invalid && (quoteForm.controls['userName'].dirty || quoteForm.controls['userName'].touched)">
+                {{"Enter valid name"}}
+            </ng-container>
+              </span>
+            </div>
+         
+        <div class="form-val">
+            <label>Contact no</label>
+            <input type="text" class="input" name="number" formControlName="contactNo" minlength="10" maxlength="10" required>
+            <span
+            *ngIf="isSubmitted ||(quoteForm.controls['contactNo'].invalid && (quoteForm.controls['contactNo'].dirty || quoteForm.controls['contactNo'].touched))"
+            class="form-error">
+            <ng-container
+              *ngIf="quoteForm.controls['contactNo'].invalid && (quoteForm.controls['contactNo'].dirty || quoteForm.controls['contactNo'].touched)">
+             Enter valid 10 digit number
+            </ng-container>
+            <ng-container *ngIf="quoteForm.controls['contactNo']?.errors?.required">
+                {{ "Conatct no is required." }}
+              </ng-container>
+          </span>
+        </div>
+      
+        <div class="form-val">
+            <label>Your Email</label>
+            <input type="text" class="input" name="email" formControlName="userEmail" required>
+            <span
+            *ngIf="isSubmitted ||(quoteForm.controls['userEmail'].invalid && (quoteForm.controls['userEmail'].dirty || quoteForm.controls['userEmail'].touched))"
+            class="form-error">
+            <ng-container *ngIf="quoteForm.controls['userEmail']?.errors?.required">
+              {{ "Email  is required." }}
+            </ng-container>
+            <ng-container *ngIf="quoteForm.controls['userEmail']?.errors?.pattern">
+              {{ "Enter valid Email id."  }}
+            </ng-container>
+          </span>
+        </div>
+
+        <span *ngIf="quoteSubmit" class="suc-msg">We here you! we will get back to you for planning your vaction  </span>
+
+        <span *ngIf="!quoteSubmit" class=""> </span>
+
+
+        <button type="button" class="custom-btn" (click)="submitQuote()">Submit</button>
+            
+        </div>
+    </form>
+</div>

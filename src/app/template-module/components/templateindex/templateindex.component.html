@@ -1,0 +1,59 @@
+<div class="home-info">
+
+    <!--Head info-offer period-->
+    <div class="head-text">
+        <span>Book now to get excisting travel deals.Upto 40% off on credit card payments</span>
+        <span>Offers end in <span id="timer" class="timerVal"></span>
+      </span>
+    </div>
+
+    <!--Menu navigations-->
+    <div class="navbar">
+       <ul>
+            <li>
+            <a href="javascript:;" title="weather"(click)="onClickscroll('weather')" >WEATHER</a>
+            </li>
+            <li>
+            <a href="javascript:;" title="Destination" (click)="onClickscroll('destination')">DESTINATIONS</a>
+            </li>
+            <li>
+            <a href="javascript:;" title="get a quote" (click)="onClickscroll('quote')">GET A QUOTE</a>
+            </li>
+       </ul>
+    </div>
+
+    <!--Banner section-->
+    <app-bannersection></app-bannersection>
+
+      <!--weather section-->
+
+    <div id="weather">
+        <app-weather></app-weather>
+    </div>
+  
+  
+
+    <!--Destinations-->
+    <div id="destination">
+    <app-destinations></app-destinations>
+    </div>
+
+    <!--Trip section-->
+
+    <div class="trip">
+        <div class="trip-text">
+          <h1>PLAN A TRIP</h1>
+          <h3>Make your vacation the most</h3>
+          <h3>memorable one</h3>
+        </div>
+      </div>
+
+      <!--Quote form-->
+      <div id="quote">
+      <app-quote></app-quote>
+      </div>
+
+      <!--footer-->
+
+      <app-footer></app-footer>
+</div>

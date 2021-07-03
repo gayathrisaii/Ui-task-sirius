@@ -1,0 +1,21 @@
+<div class="destinations">
+    <h3>Featured Destinations</h3>
+
+    <ng-container *ngIf="!destinationData">
+        <div class="loader">
+        </div>
+        <div class="loader sm">
+        </div>
+    </ng-container>
+   
+
+    <ul *ngIf="destinationData">
+        <li *ngFor="let key of Object?.keys(destinationData);let i=index" class="city{{i}}">
+            <img src="{{destinationData[key]?.imageUrl}}">
+            <span class="city">{{destinationData[key]?.city}}</span>
+           
+            <!-- <span class="fah">{{weatherResponse[key].temp_Fahr}}</span> -->
+        </li>
+    </ul>
+
+</div>

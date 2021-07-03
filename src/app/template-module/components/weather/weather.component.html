@@ -1,0 +1,25 @@
+<div class="weather-report">
+    <div class="weather">
+        <span>THE WEATHER CHANNEL</span>
+    </div>
+
+    <ng-container *ngIf="!weatherResponse">
+        <div class="loader">
+        </div>
+        <div class="loader sm">
+        </div>
+    </ng-container>
+  
+
+    <div class="weather-info" *ngIf="weatherResponse">
+        <ul>
+            <li *ngFor="let key of Object?.keys(weatherResponse);let i=index" class="weather{{i}}">
+                <span class="city">{{weatherResponse[key]?.city}}</span>
+                <img src="./../../../../assets/images/icon-party-sunny.svg">
+                <span class="cel">{{weatherResponse[key]?.temp_Celsius}}</span>
+                <!-- <span class="fah">{{weatherResponse[key].temp_Fahr}}</span> -->
+            </li>
+        </ul>
+    </div>
+</div>
+

@@ -1,0 +1,102 @@
+@import '../../../../assets/scss/all.scss';
+
+.home-info{
+    .head-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $theme;
+        padding: 15px 0px 15px 0px;
+        span{
+            color: $white;
+            font-size: 18px;
+            line-height: 28px;
+        }
+        .timerVal{
+            font-weight: bold;
+        }
+    }
+
+    .navbar{
+        margin: 2% 2% 0 0;
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            width: 96%;
+            li{
+                list-style: none;
+                padding-right: 5%;
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 18px;
+                    font-family: 'RoboBold';
+                }
+            }
+        }
+    }
+    .trip {
+        background-image: url("../../../../assets/images/promo-image.png");
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .trip-text {
+            position: absolute;
+            top: 66%;
+            left: 26%;
+            transform: translate(-50%, -50%);
+            color: $white;
+            text-align: left;
+            h1{
+                font-size: 64px;
+                letter-spacing: 6px;
+            }
+            h3{
+                font-size: 35px;
+                letter-spacing: 3px;
+                font-family: 'RoboBold';
+            }
+          }
+      }
+      
+     
+}
+
+@include screen (mobile){
+.head-text{
+    span{
+        font-size: 15px !important;
+    text-align: center;
+    }
+}
+.navbar{
+    margin: 7% 3% 5px 0 !important;
+    li{
+        padding-right: 7% !important;
+        a{
+            font-size: 14px !important;
+
+        }
+    }
+}
+.trip{
+    height: 179px !important;
+    background-size: 432px;
+    .trip-text{
+        top: 56% !important;
+        left: 32% !important;
+        h1{
+            font-size: 17px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 14px;
+        }
+        h3{
+            font-size: 14px !important;
+    letter-spacing: 1px !important;
+        }
+    }
+}
+}

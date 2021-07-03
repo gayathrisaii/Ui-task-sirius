@@ -1,0 +1,61 @@
+@import '../../../../assets/scss/all.scss';
+
+.banner-view{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    .left{
+      text-align: center;
+      img{
+        width: 81%;
+      }
+    }
+    .right{
+      h2{
+        font-size: 50px;
+      }
+      span{
+        display: flex;
+        font-size: 18px;
+        width: 70%
+      }
+      button{
+    background: #040c14;
+    padding: 10px 30px 10px 30px;
+    font-size: 18px;
+    margin-top: 1em;
+    border: 0px;
+    color:$white;
+    cursor: pointer;
+    border-radius: 5px;
+    pointer-events: none;
+      }
+    }
+}
+
+
+@include screen (mobile){
+
+  .banner-view{
+      flex-direction: column;
+      .left{
+          img{
+          width: 60%;
+          margin: 2em 0 2em 0;
+          }
+      }
+      .right{
+        width: 86%;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+        h2{
+          font-size: 26px;
+        }
+        span{
+          width: 98%;
+    text-align: center;
+        }
+      }
+  }
+  }

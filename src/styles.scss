@@ -1,0 +1,67 @@
+/*********************
+** Common Styls
+**************/
+@import '../src/assets/scss/all.scss';
+html{
+    scroll-behavior: smooth;
+}
+*,body{
+    font-family: 'RoboRegular';
+    margin: 0;
+    padding: 0px;
+    max-width: 100%;
+}
+.form-error{
+    color: $red;
+    font-size: 14px;
+    margin-top: 4px
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $theme; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#718fb1; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #426fa2; 
+  }
+
+  @keyframes placeholder {
+    0% { background-position: -600px 0 }
+    100% { background-position: 600px 0 }
+}
+
+.loader {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholder;
+  animation-timing-function: linear;
+  background: #eeeeee;
+  background: linear-gradient(to right, #eee 8%, #ddd 18%, #eee 33%);
+  background-size: 1200px 100px;
+  min-height: 22px;
+  width: 77%;
+  margin: 23px 0 8px 0;
+  border-radius: 3px;
+}
+
+
+@include screen (mobile){
+   .loader{
+    margin: 23px 0 8px 28px !important;
+   }
+       
+        }
+

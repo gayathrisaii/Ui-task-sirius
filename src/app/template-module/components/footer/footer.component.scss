@@ -1,0 +1,64 @@
+
+@import '../../../../assets/scss/all.scss';
+
+.footer{
+    background-color: $theme;
+    .footer-view{
+        display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 40px 0px 40px 0px;
+        h3{
+            color:$white;
+            margin-bottom: 28px;
+            font-size: 20px;
+        }
+        ul{
+            li{
+                list-style: none;
+                margin: 16px 0px 0px 0px;
+                a{
+                    text-decoration: none;
+                    color:$white;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .items{
+            width: 40%;
+        }
+    }
+}
+
+@include screen (mobile){
+    .footer-view{
+        flex-direction: column;
+        .items,.item-last{
+            margin: 35px 0px 0px 0px !important;
+            width: 90% !important;
+            ul{
+                li{
+                    margin: 16px 0px 0px 0px !important;
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .item-last{
+            ul{
+                li{
+                    a{
+                width: 100%;
+                letter-spacing: 1px;
+                line-height: 26px;
+                font-size: 17px;
+                    }
+                }
+            }
+        }
+        }
+       
+        }
